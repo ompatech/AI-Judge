@@ -43,3 +43,14 @@ export async function updateJudge(
   const { error } = await supabase.from("judges").update(patch).eq("id", id);
   if (error) throw new Error(error.message);
 }
+
+export async function listActiveJudges(): Promise<JudgeRow[]> {
+  const { data, error } = await supabase
+    .from("judges")
+    .select("*")
+    .eq("active", true)
+    .order("created_at", { ascending: false });
+
+  if (error) throw new Error(error.message);
+  return (data ?? []) as JudgeRow[];
+}

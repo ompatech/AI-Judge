@@ -7,7 +7,7 @@ function toIsoFromMs(ms: number): string {
 
 export async function importJsonString(jsonText: string) {
   let data: InputFile;
-  data = JSON.parse(jsonText);
+  data = JSON.parse(jsonText);  
   if (!Array.isArray(data)) throw new Error("Top-level JSON must be an array.");
 
   // queues
