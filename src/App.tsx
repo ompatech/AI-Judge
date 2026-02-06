@@ -3,6 +3,7 @@ import { ImportPage } from "./pages/ImportPage";
 import { JudgesPage } from "./pages/JudgesPage";
 import { QueuesPage } from "./pages/QueuesPage";
 import { QueueDetailPage } from "./pages/QueueDetailPage";
+import { ResultsPage } from "./pages/ResultsPage";
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
           <Link to="/import">Import</Link>
           <Link to="/judges">Judges</Link>
           <Link to="/queues">Queues</Link>
+          <Link to="/results">Results</Link>
         </nav>
 
         <Routes>
@@ -20,6 +22,7 @@ export default function App() {
           <Route path="/judges" element={<JudgesPage />} />
           <Route path="/queues" element={<QueuesPage />} />
           <Route path="/queues/:queueId" element={<QueueDetailPage />} />
+          <Route path="/results" element={<ResultsPage />} />
         </Routes>
       </div>
     </BrowserRouter>
