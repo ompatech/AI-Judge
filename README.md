@@ -1,4 +1,4 @@
-# AI Judge — Rubric-Driven LLM Evaluation System
+# AI Judge - Rubric-Driven LLM Evaluation System
 
 AI Judge is a lightweight, end-to-end system for evaluating submissions using **rubric-based AI judges**.  
 It enables human-defined grading rubrics, scalable evaluation runs, and transparent inspection of results, while keeping humans firmly in the loop.
@@ -147,7 +147,7 @@ The importer expects an array of submissions in the following format:
   }
 ]
 
----
+```
 
 ## Local Setup
 
@@ -161,12 +161,8 @@ The importer expects an array of submissions in the following format:
 npm install
 npm run dev
 
----
+```
 
-### ️Add **Supabase Setup**  
-Immediately after **Local Setup**
-
-```md
 ## Supabase Setup
 
 1. Create a new Supabase project
@@ -186,15 +182,7 @@ Set the following variables in your Supabase project:
 ```bash
 supabase functions deploy evaluate
 
----
-
-### Add **How to Test the System**  
-Place **after `## JSON Import Format`**
-
-This complements the flow section without duplicating it.
-
-```md
----
+```
 
 ## How to Test the System
 
@@ -219,16 +207,12 @@ This complements the flow section without duplicating it.
    - Filter by queue, judge, or verdict
    - Inspect verdicts and reasoning
 
----
-
 ## Error Handling
 
 - Missing assignments → no evaluation tasks generated
 - LLM API failure → verdict marked as *inconclusive*
 - Malformed model output → safe JSON extraction with fallback
 - Duplicate evaluation runs → upsert logic prevents duplication
-
----
 
 ## Future Improvements
 
