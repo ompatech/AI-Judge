@@ -1,10 +1,16 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.tsx'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
+const root = document.getElementById("root")!;
+
+// Force full-viewport light background
+document.body.style.margin = "0";
+document.body.style.background = "#f9fafb";
+document.body.style.color = "#111827";
+
+ReactDOM.createRoot(root).render(
+  <React.StrictMode>
     <App />
-  </StrictMode>,
-)
+  </React.StrictMode>
+);
